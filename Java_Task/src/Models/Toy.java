@@ -6,11 +6,15 @@ public class Toy {
     private int quantity;
     private int frequency;
 
-    public Toy(int id, String name, int quantity, int frequency) {
-        this.id = id;
+    public Toy(String name, int quantity, int frequency) {
         this.name = name;
         this.quantity = quantity;
         this.frequency = frequency;
+    }
+
+    public Toy(int id, String name, int quantity, int frequency) {
+        this(name, quantity, frequency);
+        this.id = id;
     }
 
     public int getId() {
